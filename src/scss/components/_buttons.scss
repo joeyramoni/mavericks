@@ -20,6 +20,7 @@
 	cursor: pointer;
 	text-decoration: none;
 	line-height: 1;
+	transition: $standard-transition;
 }
 
 // Buttons on hover
@@ -28,6 +29,7 @@
 	background: $button-background-hover;
 	color: $button-color;
 	text-decoration: none;
+	transition: $standard-transition;
 }
 
 // Buttons on focus

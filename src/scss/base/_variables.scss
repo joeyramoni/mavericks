@@ -74,7 +74,7 @@ $content-padding-mobile: 30px 0;
 $border-width: 1px;
 $border-style: solid;
 $border-color: #dedede;
-$border-radius: 4px;
+$border-radius: 3px;
 $borders: $border-width $border-style $border-color;
 
 /* Buttons */
@@ -85,7 +85,7 @@ $button-color: #ffffff;
 $button-font-weight: 600;
 $button-font-family: -apple-system, BlinkMacSystemFont, Helvetica Neue, Helvetica, Arial, sans-serif;
 $button-font-size: 1rem;
-$button-border-width: 1px;
+$button-border-width: 2px;
 $button-border-style: solid;
 $button-border-color: $button-background;
 $button-border-radius: $border-radius;
@@ -97,8 +97,8 @@ $accent-button-color: #ffffff;
 $accent-button-color-hover: #ffffff;
 
 // Muted Buttons
-$muted-border: 1px solid $accent-color;
-$muted-border-hover: 1px solid darken($accent-color, 30%);
+$muted-border: 2px solid $accent-color;
+$muted-border-hover: 2px solid darken($accent-color, 30%);
 $muted-background: transparent;
 $muted-background-hover: transparent;
 $muted-color: darken($accent-color, 50%);
@@ -112,10 +112,12 @@ $round-buttons: 40px;
 $forms: ('[type=color], [type=date], [type=datetime], [type=datetime-local], [type=email], [type=month], [type=number], [type=password], [type=search], [type=tel], [type=text], [type=url], [type=week], [type=time], select, textarea');
 $buttons: ('.button, a.button, button, [type=submit], [type=reset], [type=button]');
 $input-background: transparent;
-$placeholder: darken($accent-color, 20%);
-$form-border: 1px solid #cdcdcd;
-$form-border-hover: 1px solid darken(#cdcdcd, 10%);
-$form-border-focus: 1px solid $link-color;
+$placeholder: #CAC5D3;
+$form-border: 2px solid lighten($primary-color, 30%);
+$form-border-hover: $form-border;
+$form-border-focus: 2px solid $link-color;
+$floating-label-font-weight: 700;
+$floating-input-font-weight: normal;
 
 /* Tables */
 
@@ -129,3 +131,8 @@ $code-size: 14px;
 $code-family: Menlo, monospace;
 $code-background: transparent;
 $code-borders: $borders;
+
+
+/* Animation */
+
+$standard-transition: all .2s ease-in-out;

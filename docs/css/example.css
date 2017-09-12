@@ -8,7 +8,7 @@ a {
 a:hover,
 a:active,
 a:focus {
-	color: #0366ee;
+	color: #7E3DED;
 }
 
 
@@ -16,7 +16,7 @@ a:focus {
 
 header {
 	margin-top: 60px;
-	background: #2A55F1 url('../images/grid.png') no-repeat left center / cover;
+	background: #7E3DED no-repeat left center / cover;
 	padding: 60px 0;
 }
 
@@ -47,7 +47,7 @@ a.example-button:active,
 a.example-button:focus {
 	border: 1px solid white;
 	background: white;
-	color: #0366ee;
+	color: #7E3DED;
 }
 
 .setup {
@@ -125,7 +125,7 @@ aside li a {
 }
 
 aside li a.active {
-	color: #0366ee;
+	color: #7E3DED;
 }
 
 aside li a:hover,
@@ -140,7 +140,7 @@ aside li a.active:hover,
 aside li a.active:active,
 aside li a.active:focus {
 	background: #f0f0f0;
-	color: #0366ee;
+	color: #7E3DED;
 	text-decoration: none;
 }
 
@@ -150,7 +150,7 @@ aside li a.active:focus {
 }
 
 .active .fa {
-	color: #0366ee;
+	color: #7E3DED;
 }
 
 .toggle-nav {
@@ -174,7 +174,6 @@ aside li a.active:focus {
 	position: fixed;
 	top: 0;
 }
-
 
 /* Containers */
 
@@ -204,7 +203,7 @@ article {
 	margin-bottom: .5rem;
 	padding-top: .25rem;
 	padding-bottom: .25rem;
-	border: 1px solid #0366ee;
+	border: 1px solid #7E3DED;
 	font-weight: 400;
 }
 

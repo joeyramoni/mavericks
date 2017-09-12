@@ -26,35 +26,8 @@
 		<div class="small-container">
 			<h1>Mavericks</h1>
 			<p>Mavericks is a minimalist Sass boilerplate that provides helpful, browser-consistent styling for buttons, forms, tables, lists, and typography, and a responsive grid system for templating.</p>
-			<p>
-				<a class="github-button" href="https://github.com/taniarascia/primitive" data-icon="octicon-star" data-size="large" data-show-count="true" aria-label="Star taniarascia/primitive on GitHub">Star</a>
-				<a class="github-button" href="https://github.com/taniarascia" data-show-count="true"  data-size="large" aria-label="Follow @taniarascia on GitHub">Follow @taniarascia</a>
-			</p>
-			<p>
-				<a id="boring" class="button example-button">Boring Mode</a>
-				<a id="eighties" class="button">EIGHTIES MODE!</a>
-			</p>
 		</div>
 	</header>
-
-	<section class="setup content-section">
-		<div class="installation small-container">
-			<h2>Download and Installation</h2>
-			<p>There are two options for using Primitive.</p>
-			<div class="flex-row padding-top">
-				<div class="flex-large flex-50">
-					<img src="images/css3.png" class="logos">
-					<h4><strong>CSS</strong> (easy)</h4>
-					<p><a href="https://taniarascia.github.io/primitive/css/main.min.css" download>Download the stylesheet</a>, link to it in the <code>&lt;head&gt;</code>, and place all your custom CSS in a separate stylesheet.</p>
-				</div>
-				<div class="flex-large flex-50">
-					<img src="images/sass.png" class="logos">
-					<h4><strong>Sass</strong> (recommended)</h4>
-					<p><a href="#sass-main">Download the source</a> and set up a Sass workflow with Gulp.</p>
-				</div>
-			</div>
-		</div>
-	</section>
 
 	<section class="primitive">
 
@@ -285,17 +258,23 @@
   &lt;label for=&quot;name&quot;&gt;Name&lt;/label&gt;
   &lt;input type=&quot;text&quot; id=&quot;name&quot; placeholder=&quot;First Name&quot;&gt;
   &lt;label for=&quot;choose&quot;&gt;Select&lt;/label&gt;
-  &lt;select id=&quot;choose&quot;&gt;
-    &lt;option disabled selected&gt;Please select&lt;/option&gt;
-    &lt;option value="option-1"&gt;Option 1&lt;/option&gt;
-    &lt;option value="option-2"&gt;Option 2&lt;/option&gt;
-  &lt;/select&gt;
+  &lt;div class=&quot;select&quot;&gt;
+    &lt;select id=&quot;choose&quot;&gt;
+        &lt;option disabled selected&gt;Please select an option&lt;/option&gt;
+        &lt;option value=&quot;option-1&quot;&gt;Option 1&lt;/option&gt;
+        &lt;option value=&quot;option-2&quot;&gt;Option 2&lt;/option&gt;
+        &lt;option value=&quot;option-2&quot;&gt;Option 3&lt;/option&gt;
+        &lt;option value=&quot;option-2&quot;&gt;Option 4&lt;/option&gt;
+    &lt;/select&gt;
+    &lt;div class=&quot;select-arrow&quot;&gt;&lt;/div&gt;
+  &lt;/div&gt;
   &lt;label for=&quot;comments&quot;&gt;Additional Comments&lt;/label&gt;
   &lt;textarea id=&quot;comments&quot;&gt;&lt;/textarea&gt;
-  &lt;label&gt;
-    &lt;input type=&quot;checkbox&quot;&gt;
-    Remember me
-  &lt;/label&gt;
+  &lt;label class=&quot;control checkbox&quot;&gt;
+    I do accept all the paperwork
+	  &lt;input type=&quot;checkbox&quot; name=&quot;Scopes&quot; value=&quot;banks&quot;/&gt;
+	  &lt;div class=&quot;control-indicator&quot;&gt;&lt;/div&gt;
+	&lt;/label&gt;
   &lt;input type=&quot;submit&quot; value=&quot;Submit&quot;&gt;
 &lt;/form&gt;</code></pre>
 
@@ -304,16 +283,22 @@
 								<input type="text" id="name" placeholder="First Name">
 								<label for="email">Email</label>
 								<input type="email" id="email" placeholder="Email address">
-								<label for="choose">Select</label>
-								<select id="choose">
-									<option disabled selected>Please select</option>
-									<option value="option-1">Option 1</option>
-									<option value="option-2">Option 2</option>
-								</select>
+                <label for="choose">Select</label>
+                <div class="select">
+                  <select id="choose">
+                      <option disabled selected>Please select an option</option>
+                      <option value="option-1">Option 1</option>
+                      <option value="option-2">Option 2</option>
+                      <option value="option-2">Option 3</option>
+                      <option value="option-2">Option 4</option>
+                    </select>
+                  <div class="select-arrow"></div>
+                </div>
 								<label for="comments">Additional Comments</label>
 								<textarea id="comments"></textarea>
-								<label>
-									<input type="checkbox"> Remember me
+								<label class="control checkbox">I do accept all the paperwork
+									<input type="checkbox" name="Scopes" value="banks"/>
+									<div class="control-indicator"></div>
 								</label>
 								<input type="button" value="Submit">
 							</form>
@@ -321,11 +306,26 @@
 
 						<article>
 							<h3>Form Validation</h3>
-							<p>An input field with a <code>has-error</code> class.</p>
+							<p>Adding  <code>has-error</code> class.</p>
 							<pre><code class="language-html">&lt;input type=&quot;text&quot; id=&quot;name&quot; placeholder=&quot;Name&quot; class=&quot;has-error&quot;&gt;</code></pre>
 							<form>
 								<label for="name-error">Name</label>
 								<input type="text" id="name-error" placeholder="Name" class="has-error">
+							</form>
+						</article>
+
+						<article>
+							<h3>Floating label forms</h3>
+							<p>Adding a <code>floating</code> class to the the parent div will create inputs with floating labels</p>
+							<pre><code class="language-html">&lt;div class=&quot;form-group floating&quot;&gt;
+	&lt;input type=&quot;text&quot; id=&quot;name&quot; class=&quot;form-control&quot; name=&quot;Name&quot; placeholder=&quot;What's your name?&quot;&gt;
+	&lt;label for=&quot;name&quot; class=&quot;&quot;&gt;Name&lt;/label&gt;
+&lt;/div&gt;</code></pre>
+							<form>
+								<div class="form-group floating">
+                                    <input type="text" id="name" class="form-control" name="Name" placeholder="What's your name?">
+                                    <label for="name" class="">Name</label>
+                                </div>
 							</form>
 						</article>
 

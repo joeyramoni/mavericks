@@ -1,10 +1,5 @@
 $(document).ready(function () {
-	$('#eighties').click(function () {
-		$('link[href="css/example.css"]').attr('href', 'css/eighties.css');
-	});
-	$('#boring').click(function () {
-		$('link[href="css/eighties.css"]').attr('href', 'css/example.css');
-	});
+
 	$(document).on("scroll", onScroll);
 
 	// Smooth scroll
